@@ -1,11 +1,11 @@
-package parsers2dom
+package parsers2objectmodel
 
 import (
 	"bytes"
 	"errors"
 	"strings"
 
-	"github.com/codemodify/Yeti/dom"
+	objectmodel "github.com/codemodify/Yeti/object-model"
 	"golang.org/x/net/html"
 )
 
@@ -13,12 +13,12 @@ import (
 type HTMLParser struct{}
 
 // NewHTMLParser - FIXME
-func NewHTMLParser() dom.Parser {
+func NewHTMLParser() objectmodel.Parser {
 	return HTMLParser{}
 }
 
 // Parse - `Parser` interface
-func (thisRef HTMLParser) Parse(data []byte) (*dom.NodeModel, error) {
+func (thisRef HTMLParser) Parse(data []byte) (*objectmodel.ObjectModel, error) {
 
 	// <html>
 	// <body>
@@ -32,46 +32,46 @@ func (thisRef HTMLParser) Parse(data []byte) (*dom.NodeModel, error) {
 	//	|
 	//	V
 
-	// &dom.NodeModel{
+	// &objectmodel.ObjectModel{
 	// 	Tag: "html",
-	// 	Children: []*dom.NodeModel{
-	// 		&dom.NodeModel{
+	// 	Children: []*objectmodel.ObjectModel{
+	// 		&objectmodel.ObjectModel{
 	// 			Tag: "body",
-	// 			Children: []*dom.NodeModel{
-	// 				&dom.NodeModel{
+	// 			Children: []*objectmodel.ObjectModel{
+	// 				&objectmodel.ObjectModel{
 	// 					Tag: "h1",
-	// 					Children: []*dom.NodeModel{
-	// 						&dom.NodeModel{
-	// 							Tag:  dom.FiniteTextTag,
+	// 					Children: []*objectmodel.ObjectModel{
+	// 						&objectmodel.ObjectModel{
+	// 							Tag:  objectmodel.FiniteTextTag,
 	// 							Text: "Title",
 	// 						},
 	// 					},
 	// 				},
-	// 				&dom.NodeModel{
+	// 				&objectmodel.ObjectModel{
 	// 					Tag: "div",
 	// 					Attributes: map[string]string{
 	// 						"id":    "main",
 	// 						"class": "test",
 	// 					},
-	// 					Children: []*dom.NodeModel{
-	// 						&dom.NodeModel{
+	// 					Children: []*objectmodel.ObjectModel{
+	// 						&objectmodel.ObjectModel{
 	// 							Tag: "p",
-	// 							Children: []*dom.NodeModel{
-	// 								&dom.NodeModel{
-	// 									Tag:  dom.FiniteTextTag,
+	// 							Children: []*objectmodel.ObjectModel{
+	// 								&objectmodel.ObjectModel{
+	// 									Tag:  objectmodel.FiniteTextTag,
 	// 									Text: "Hello",
 	// 								},
-	// 								&dom.NodeModel{
+	// 								&objectmodel.ObjectModel{
 	// 									Tag: "em",
-	// 									Children: []*dom.NodeModel{
-	// 										&dom.NodeModel{
-	// 											Tag:  dom.FiniteTextTag,
+	// 									Children: []*objectmodel.ObjectModel{
+	// 										&objectmodel.ObjectModel{
+	// 											Tag:  objectmodel.FiniteTextTag,
 	// 											Text: "world",
 	// 										},
 	// 									},
 	// 								},
-	// 								&dom.NodeModel{
-	// 									Tag:  dom.FiniteTextTag,
+	// 								&objectmodel.ObjectModel{
+	// 									Tag:  objectmodel.FiniteTextTag,
 	// 									Text: "!",
 	// 								},
 	// 							},
@@ -91,7 +91,7 @@ func (thisRef HTMLParser) Parse(data []byte) (*dom.NodeModel, error) {
 	return thisRef.parseHelper(node.FirstChild)
 }
 
-func (thisRef HTMLParser) parseHelper(n *html.Node) (*dom.NodeModel, error) {
+func (thisRef HTMLParser) parseHelper(n *html.Node) (*objectmodel.ObjectModel, error) {
 
 	// FROM `golang.org/x/net/html/node.go`
 	//	ErrorNode NodeType = iota
@@ -106,13 +106,13 @@ func (thisRef HTMLParser) parseHelper(n *html.Node) (*dom.NodeModel, error) {
 		return nil, errors.New("PARSE_ERROR")
 	}
 
-	var node *dom.NodeModel
+	var node *objectmodel.ObjectModel
 
 	if n.Type == html.TextNode {
 		trimmedData := strings.TrimSpace(n.Data)
 		if len(trimmedData) > 0 {
-			node = &dom.NodeModel{
-				Tag:  dom.FiniteTextTag,
+			node = &objectmodel.ObjectModel{
+				Tag:  objectmodel.FiniteTextTag,
 				Text: strings.TrimSpace(n.Data),
 			}
 		}
@@ -120,7 +120,7 @@ func (thisRef HTMLParser) parseHelper(n *html.Node) (*dom.NodeModel, error) {
 		return node, nil
 	}
 
-	node = &dom.NodeModel{}
+	node = &objectmodel.ObjectModel{}
 
 	if n.Type == html.ElementNode {
 		node.Tag = n.Data
@@ -137,7 +137,7 @@ func (thisRef HTMLParser) parseHelper(n *html.Node) (*dom.NodeModel, error) {
 
 	// Children
 	if n.FirstChild != nil {
-		node.Children = []*dom.NodeModel{}
+		node.Children = []*objectmodel.ObjectModel{}
 
 		for c := n.FirstChild; c != nil; c = c.NextSibling {
 			childNode, err := thisRef.parseHelper(c)

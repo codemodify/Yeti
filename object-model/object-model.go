@@ -1,4 +1,4 @@
-package dom
+package objectmodel
 
 import (
 	"encoding/json"
@@ -10,16 +10,16 @@ const (
 	FiniteTextTag string = "__FiniteTextTag__"
 )
 
-// NodeModel - FIXME
-type NodeModel struct {
+// ObjectModel - FIXME
+type ObjectModel struct {
 	Tag        string            `json:"tag,omitempty"`
 	Text       string            `json:"text,omitempty"`
 	Attributes map[string]string `json:"attributes,omitempty"`
-	Children   []*NodeModel      `json:"children,omitempty"`
+	Children   []*ObjectModel    `json:"children,omitempty"`
 }
 
 // ID - `Stringer` interface
-func (thisRef NodeModel) String() string {
+func (thisRef ObjectModel) String() string {
 	data, err := json.Marshal(thisRef)
 	if err != nil {
 		log.Fatal(err)
@@ -29,7 +29,7 @@ func (thisRef NodeModel) String() string {
 }
 
 // ID - FIXME
-func (thisRef NodeModel) ID() string {
+func (thisRef ObjectModel) ID() string {
 	if value, keyExists := thisRef.Attributes["id"]; keyExists {
 		return value
 	}
@@ -38,7 +38,7 @@ func (thisRef NodeModel) ID() string {
 }
 
 // Classes - FIXME
-func (thisRef NodeModel) Classes() []string {
+func (thisRef ObjectModel) Classes() []string {
 	resut := []string{}
 
 	if value, keyExists := thisRef.Attributes["class"]; keyExists {

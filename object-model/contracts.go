@@ -1,6 +1,6 @@
-package dom
+package objectmodel
 
 // Parser - Interface for parsers, similar to io.Reader
 type Parser interface {
-	Parse(data []byte) (*NodeModel, error)
+	Parse(data []byte) (*ObjectModel, error)
 }
