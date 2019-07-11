@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"log"
 	"strings"
+
+	objectmodelstyling "github.com/codemodify/Yeti/object-model-styling"
 )
 
 const (
@@ -16,6 +18,8 @@ type ObjectModel struct {
 	Text       string            `json:"text,omitempty"`
 	Attributes map[string]string `json:"attributes,omitempty"`
 	Children   []*ObjectModel    `json:"children,omitempty"`
+
+	Style *objectmodelstyling.ElementStyle `json:"-"`
 }
 
 // ID - `Stringer` interface
