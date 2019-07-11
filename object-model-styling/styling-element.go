@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type Element struct {
-	Width         string
-	VerticalAlign string
-	Visibility    string
+	Width         string `json:"width,omitempty"`
+	VerticalAlign string `json:"verticalAlign,omitempty"`
+	Visibility    string `json:"visibility,omitempty"`
 }
 
 // const (

@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type ElementTransform struct {
-	Box    string
-	Origin string
-	Style  string
+	Box    string `json:"box,omitempty"`
+	Origin string `json:"origin,omitempty"`
+	Style  string `json:"style,omitempty"`
 }
 
 // const (

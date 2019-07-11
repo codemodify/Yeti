@@ -1,12 +1,12 @@
 package objectmodelstyling
 
 type ElementInset struct {
-	Block       string
-	BlockEnd    string
-	BlockStart  string
-	Inline      string
-	InlineEnd   string
-	InlineStart string
+	Block       string `json:"block,omitempty"`
+	BlockEnd    string `json:"blockEnd,omitempty"`
+	BlockStart  string `json:"blockStart,omitempty"`
+	Inline      string `json:"inline,omitempty"`
+	InlineEnd   string `json:"inlineEnd,omitempty"`
+	InlineStart string `json:"inlineStart,omitempty"`
 }
 
 // const (

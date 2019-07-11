@@ -1,10 +1,10 @@
 package objectmodelstyling
 
 type ElementOutline struct {
-	Color  string
-	Offset string
-	Style  string
-	Width  string
+	Color  string `json:"color,omitempty"`
+	Offset string `json:"offset,omitempty"`
+	Style  string `json:"style,omitempty"`
+	Width  string `json:"width,omitempty"`
 }
 
 // const (

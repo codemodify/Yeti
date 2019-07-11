@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type ElementMax struct {
-	Height string
-	Width  string
-	Zoom   string
+	Height string `json:"height,omitempty"`
+	Width  string `json:"width,omitempty"`
+	Zoom   string `json:"zoom,omitempty"`
 }
 
 // const (

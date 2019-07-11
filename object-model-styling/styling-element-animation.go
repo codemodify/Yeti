@@ -1,14 +1,14 @@
 package objectmodelstyling
 
 type ElementAnimation struct {
-	Delay          string
-	Direction      string
-	Duration       string
-	FillMode       string
-	IterationCount string
-	Name           string
-	PlayState      string
-	TimingFunction string
+	Delay          string `json:"delay,omitempty"`
+	Direction      string `json:"direction,omitempty"`
+	Duration       string `json:"duration,omitempty"`
+	FillMode       string `json:"fillMode,omitempty"`
+	IterationCount string `json:"iterationCount,omitempty"`
+	Name           string `json:"name,omitempty"`
+	PlayState      string `json:"playState,omitempty"`
+	TimingFunction string `json:"timingFunction,omitempty"`
 }
 
 // const (

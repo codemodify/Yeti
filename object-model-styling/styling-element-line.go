@@ -1,8 +1,8 @@
 package objectmodelstyling
 
 type ElementLine struct {
-	Break  string
-	Height string
+	Break  string `json:"break,omitempty"`
+	Height string `json:"height,omitempty"`
 }
 
 // const (

@@ -1,25 +1,25 @@
 package objectmodelstyling
 
 type ElementFont struct {
-	Family            string
-	FeatureSettings   string
-	Kerning           string
-	LanguageOverride  string
-	OpticalSizing     string
-	Size              string
-	SizeAdjust        string
-	Stretch           string
-	Style             string
-	Synthesis         string
-	Variant           string
-	VariantAlternates string
-	VariantCaps       string
-	VariantEastAsian  string
-	VariantLigatures  string
-	VariantNumeric    string
-	VariantPosition   string
-	VariationSettings string
-	Weight            string
+	Family            string `json:"family,omitempty"`
+	FeatureSettings   string `json:"featureSettings,omitempty"`
+	Kerning           string `json:"kerning,omitempty"`
+	LanguageOverride  string `json:"languageOverride,omitempty"`
+	OpticalSizing     string `json:"opticalSizing,omitempty"`
+	Size              string `json:"size,omitempty"`
+	SizeAdjust        string `json:"sizeAdjust,omitempty"`
+	Stretch           string `json:"stretch,omitempty"`
+	Style             string `json:"style,omitempty"`
+	Synthesis         string `json:"synthesis,omitempty"`
+	Variant           string `json:"variant,omitempty"`
+	VariantAlternates string `json:"variantAlternates,omitempty"`
+	VariantCaps       string `json:"variantCaps,omitempty"`
+	VariantEastAsian  string `json:"variantEastAsian,omitempty"`
+	VariantLigatures  string `json:"variantLigatures,omitempty"`
+	VariantNumeric    string `json:"variantNumeric,omitempty"`
+	VariantPosition   string `json:"variantPosition,omitempty"`
+	VariationSettings string `json:"variationSettings,omitempty"`
+	Weight            string `json:"weight,omitempty"`
 }
 
 // const (

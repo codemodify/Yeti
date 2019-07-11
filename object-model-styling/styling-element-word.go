@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type ElementWord struct {
-	Break   string
-	Spacing string
-	Wrap    string
+	Break   string `json:"break,omitempty"`
+	Spacing string `json:"spacing,omitempty"`
+	Wrap    string `json:"wrap,omitempty"`
 }
 
 // const (

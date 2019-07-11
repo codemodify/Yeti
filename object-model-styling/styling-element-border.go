@@ -1,75 +1,61 @@
 package objectmodelstyling
 
 type ElementBorder struct {
-	BlockColor      string
-	BlockEnd        string
-	BlockEndColor   string
-	BlockEndStyle   string
-	BlockEndWidth   string
-	BlockStart      string
-	BlockStartColor string
-	BlockStartStyle string
-	BlockStartWidth string
-	BlockStyle      string
-	BlockWidth      string
-
-	BottomColor       string
-	BottomLeftRadius  string
-	BottomRightRadius string
-	BottomStyle       string
-	BottomWidth       string
-
-	Collapse string
-
-	Color string
-
-	EndEndRadius   string
-	EndStartRadius string
-
-	Image       string
-	ImageOutset string
-	ImageRepeat string
-	ImageSlice  string
-	ImageSource string
-	ImageWidth  string
-
-	Inline           string
-	InlineColor      string
-	InlineEnd        string
-	InlineEndColor   string
-	InlineEndStyle   string
-	InlineEndWidth   string
-	InlineStart      string
-	InlineStartColor string
-	InlineStartStyle string
-	InlineStartWidth string
-	InlineStyle      string
-	InlineWidth      string
-
-	LeftColor string
-	LeftStyle string
-	LeftWidth string
-
-	RightColor string
-	RightStyle string
-	RightWidth string
-
-	Radius string
-
-	Spacing string
-
-	StartEndRadius   string
-	StartStartRadius string
-
-	Style string
-
-	TopColor       string
-	TopLeftRadius  string
-	TopRightRadius string
-	TopStyle       string
-	TopWidth       string
-
-	Width string
+	BlockColor        string `json:"blockColor,omitempty"`
+	BlockEnd          string `json:"blockEnd,omitempty"`
+	BlockEndColor     string `json:"blockEndColor,omitempty"`
+	BlockEndStyle     string `json:"blockEndStyle,omitempty"`
+	BlockEndWidth     string `json:"blockEndWidth,omitempty"`
+	BlockStart        string `json:"blockStart,omitempty"`
+	BlockStartColor   string `json:"blockStartColor,omitempty"`
+	BlockStartStyle   string `json:"blockStartStyle,omitempty"`
+	BlockStartWidth   string `json:"blockStartWidth,omitempty"`
+	BlockStyle        string `json:"blockStyle,omitempty"`
+	BlockWidth        string `json:"blockWidth,omitempty"`
+	BottomColor       string `json:"bottomColor,omitempty"`
+	BottomLeftRadius  string `json:"bottomLeftRadius,omitempty"`
+	BottomRightRadius string `json:"bottomRightRadius,omitempty"`
+	BottomStyle       string `json:"bottomStyle,omitempty"`
+	BottomWidth       string `json:"bottomWidth,omitempty"`
+	Collapse          string `json:"collapse,omitempty"`
+	Color             string `json:"color,omitempty"`
+	EndEndRadius      string `json:"endEndRadius,omitempty"`
+	EndStartRadius    string `json:"endStartRadius,omitempty"`
+	Image             string `json:"image,omitempty"`
+	ImageOutset       string `json:"imageOutset,omitempty"`
+	ImageRepeat       string `json:"imageRepeat,omitempty"`
+	ImageSlice        string `json:"imageSlice,omitempty"`
+	ImageSource       string `json:"imageSource,omitempty"`
+	ImageWidth        string `json:"imageWidth,omitempty"`
+	Inline            string `json:"inline,omitempty"`
+	InlineColor       string `json:"inlineColor,omitempty"`
+	InlineEnd         string `json:"inlineEnd,omitempty"`
+	InlineEndColor    string `json:"inlineEndColor,omitempty"`
+	InlineEndStyle    string `json:"inlineEndStyle,omitempty"`
+	InlineEndWidth    string `json:"inlineEndWidth,omitempty"`
+	InlineStart       string `json:"inlineStart,omitempty"`
+	InlineStartColor  string `json:"inlineStartColor,omitempty"`
+	InlineStartStyle  string `json:"inlineStartStyle,omitempty"`
+	InlineStartWidth  string `json:"inlineStartWidth,omitempty"`
+	InlineStyle       string `json:"inlineStyle,omitempty"`
+	InlineWidth       string `json:"inlineWidth,omitempty"`
+	LeftColor         string `json:"leftColor,omitempty"`
+	LeftStyle         string `json:"leftStyle,omitempty"`
+	LeftWidth         string `json:"leftWidth,omitempty"`
+	RightColor        string `json:"rightColor,omitempty"`
+	RightStyle        string `json:"rightStyle,omitempty"`
+	RightWidth        string `json:"rightWidth,omitempty"`
+	Radius            string `json:"radius,omitempty"`
+	Spacing           string `json:"spacing,omitempty"`
+	StartEndRadius    string `json:"startEndRadius,omitempty"`
+	StartStartRadius  string `json:"startStartRadius,omitempty"`
+	Style             string `json:"style,omitempty"`
+	TopColor          string `json:"topColor,omitempty"`
+	TopLeftRadius     string `json:"topLeftRadius,omitempty"`
+	TopRightRadius    string `json:"topRightRadius,omitempty"`
+	TopStyle          string `json:"topStyle,omitempty"`
+	TopWidth          string `json:"topWidth,omitempty"`
+	Width             string `json:"width,omitempty"`
 }
 
 // const (

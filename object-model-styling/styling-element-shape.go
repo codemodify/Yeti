@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type ElementSpahe struct {
-	ImageThreshold string
-	Margin         string
-	Outside        string
+	ImageThreshold string `json:"imageThreshold,omitempty"`
+	Margin         string `json:"margin,omitempty"`
+	Outside        string `json:"outside,omitempty"`
 }
 
 // const (

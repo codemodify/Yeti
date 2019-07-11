@@ -1,10 +1,10 @@
 package objectmodelstyling
 
 type ElementTransition struct {
-	Delay          string
-	Duration       string
-	Property       string
-	TimingFunction string
+	Delay          string `json:"delay,omitempty"`
+	Duration       string `json:"duration,omitempty"`
+	Property       string `json:"property,omitempty"`
+	TimingFunction string `json:"timingFunction,omitempty"`
 }
 
 // const (

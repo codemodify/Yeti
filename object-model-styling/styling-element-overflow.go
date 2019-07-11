@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type ElementOverflow struct {
-	Wrap string
-	X    string
-	Y    string
+	Wrap string `json:"wrap,omitempty"`
+	X    string `json:"x,omitempty"`
+	Y    string `json:"y,omitempty"`
 }
 
 // const (

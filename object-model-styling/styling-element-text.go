@@ -1,25 +1,25 @@
 package objectmodelstyling
 
 type ElementText struct {
-	Align             string
-	AlignLast         string
-	CombineUpright    string
-	Decoration        string
-	DecorationColor   string
-	DecorationLine    string
-	DecorationStyle   string
-	Emphasis          string
-	EmphasisColor     string
-	EmphasisPosition  string
-	EmphasisStyle     string
-	Indent            string
-	Justify           string
-	Orientation       string
-	Overflow          string
-	Rendering         string
-	Shadow            string
-	Transform         string
-	UnderlinePosition string
+	Align             string `json:"align,omitempty"`
+	AlignLast         string `json:"alignLast,omitempty"`
+	CombineUpright    string `json:"combineUpright,omitempty"`
+	Decoration        string `json:"decoration,omitempty"`
+	DecorationColor   string `json:"decorationColor,omitempty"`
+	DecorationLine    string `json:"decorationLine,omitempty"`
+	DecorationStyle   string `json:"decorationStyle,omitempty"`
+	Emphasis          string `json:"emphasis,omitempty"`
+	EmphasisColor     string `json:"emphasisColor,omitempty"`
+	EmphasisPosition  string `json:"emphasisPosition,omitempty"`
+	EmphasisStyle     string `json:"emphasisStyle,omitempty"`
+	Indent            string `json:"indent,omitempty"`
+	Justify           string `json:"justify,omitempty"`
+	Orientation       string `json:"orientation,omitempty"`
+	Overflow          string `json:"overflow,omitempty"`
+	Rendering         string `json:"rendering,omitempty"`
+	Shadow            string `json:"shadow,omitempty"`
+	Transform         string `json:"transform,omitempty"`
+	UnderlinePosition string `json:"underlinePosition,omitempty"`
 }
 
 // const (

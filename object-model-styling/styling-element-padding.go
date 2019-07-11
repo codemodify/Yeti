@@ -1,16 +1,16 @@
 package objectmodelstyling
 
 type ElementPadding struct {
-	Block       string
-	BlockEnd    string
-	BlockStart  string
-	Bottom      string
-	Inline      string
-	InlineEnd   string
-	InlineStart string
-	Left        string
-	Right       string
-	Top         string
+	Block       string `json:"block,omitempty"`
+	BlockEnd    string `json:"blockEnd,omitempty"`
+	BlockStart  string `json:"blockStart,omitempty"`
+	Bottom      string `json:"bottom,omitempty"`
+	Inline      string `json:"inline,omitempty"`
+	InlineEnd   string `json:"inlineEnd,omitempty"`
+	InlineStart string `json:"inlineStart,omitempty"`
+	Left        string `json:"left,omitempty"`
+	Right       string `json:"right,omitempty"`
+	Top         string `json:"top,omitempty"`
 }
 
 // const (

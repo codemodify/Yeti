@@ -88,7 +88,12 @@ func (thisRef HTMLParser) Parse(data []byte) (*objectmodel.ObjectModel, error) {
 		return nil, err
 	}
 
-	return thisRef.parseHelper(node.FirstChild)
+	objectModel, err := thisRef.parseHelper(node.FirstChild)
+	if err != nil {
+		objectModel.NodeReady()
+	}
+
+	return objectModel, err
 }
 
 func (thisRef HTMLParser) parseHelper(n *html.Node) (*objectmodel.ObjectModel, error) {

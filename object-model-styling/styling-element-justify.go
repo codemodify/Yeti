@@ -1,9 +1,9 @@
 package objectmodelstyling
 
 type ElementJustify struct {
-	Content string
-	Items   string
-	Self    string
+	Content string `json:"content,omitempty"`
+	Items   string `json:"items,omitempty"`
+	Self    string `json:"self,omitempty"`
 }
 
 // const (

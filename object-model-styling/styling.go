@@ -4,28 +4,28 @@ package objectmodelstyling
 
 // ElementStyle - FIXME
 type ElementStyle struct {
-	Align      *ElementAlign
-	Animation  *ElementAnimation
-	Background *ElementBackground
-	Border     *ElementBorder
-	Font       *ElementFont
-	Inset      *ElementInset
-	Justify    *ElementJustify
-	Line       *ElementLine
-	Margin     *ElementMargin
-	Mask       *ElementMask
-	Max        *ElementMax
-	Min        *ElementMin
-	Outline    *ElementOutline
-	Overflow   *ElementOverflow
-	Padding    *ElementPadding
-	Scroll     *ElementScroll
-	Spahe      *ElementSpahe
-	Text       *ElementText
-	Transform  *ElementTransform
-	Transition *ElementTransition
-	Word       *ElementWord
-	Element    *Element
+	Align      *ElementAlign      `json:"align,omitempty"`
+	Animation  *ElementAnimation  `json:"animation,omitempty"`
+	Background *ElementBackground `json:"background,omitempty"`
+	Border     *ElementBorder     `json:"border,omitempty"`
+	Font       *ElementFont       `json:"font,omitempty"`
+	Inset      *ElementInset      `json:"inset,omitempty"`
+	Justify    *ElementJustify    `json:"justify,omitempty"`
+	Line       *ElementLine       `json:"line,omitempty"`
+	Margin     *ElementMargin     `json:"margin,omitempty"`
+	Mask       *ElementMask       `json:"mask,omitempty"`
+	Max        *ElementMax        `json:"max,omitempty"`
+	Min        *ElementMin        `json:"min,omitempty"`
+	Outline    *ElementOutline    `json:"outline,omitempty"`
+	Overflow   *ElementOverflow   `json:"overflow,omitempty"`
+	Padding    *ElementPadding    `json:"padding,omitempty"`
+	Scroll     *ElementScroll     `json:"scroll,omitempty"`
+	Spahe      *ElementSpahe      `json:"spahe,omitempty"`
+	Text       *ElementText       `json:"text,omitempty"`
+	Transform  *ElementTransform  `json:"transform,omitempty"`
+	Transition *ElementTransition `json:"transition,omitempty"`
+	Word       *ElementWord       `json:"word,omitempty"`
+	Element    *Element           `json:"element,omitempty"`
 }
 
 // GlobalStyle - FIXME

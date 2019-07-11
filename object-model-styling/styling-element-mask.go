@@ -1,15 +1,15 @@
 package objectmodelstyling
 
 type ElementMask struct {
-	Clip      string
-	Composite string
-	Image     string
-	Mode      string
-	Origin    string
-	Position  string
-	Repeat    string
-	Size      string
-	Type      string
+	Clip      string `json:"clip,omitempty"`
+	Composite string `json:"composite,omitempty"`
+	Image     string `json:"image,omitempty"`
+	Mode      string `json:"mode,omitempty"`
+	Origin    string `json:"origin,omitempty"`
+	Position  string `json:"position,omitempty"`
+	Repeat    string `json:"repeat,omitempty"`
+	Size      string `json:"size,omitempty"`
+	Type      string `json:"type,omitempty"`
 }
 
 // const (

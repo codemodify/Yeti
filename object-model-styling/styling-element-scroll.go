@@ -1,30 +1,30 @@
 package objectmodelstyling
 
 type ElementScroll struct {
-	Behavior           string
-	MarginBlock        string
-	MarginBlockEnd     string
-	MarginBlockStart   string
-	MarginBottom       string
-	MarginInline       string
-	MarginInlineEnd    string
-	MarginInlineStart  string
-	MarginLeft         string
-	MarginRight        string
-	MarginTop          string
-	PaddingBlock       string
-	PaddingBlockEnd    string
-	PaddingBlockStart  string
-	PaddingBottom      string
-	PaddingInline      string
-	PaddingInlineEnd   string
-	PaddingInlineStart string
-	PaddingLeft        string
-	PaddingRight       string
-	PaddingTop         string
-	SnapAlign          string
-	SnapStop           string
-	SnapType           string
+	Behavior           string `json:"behavior,omitempty"`
+	MarginBlock        string `json:"marginBlock,omitempty"`
+	MarginBlockEnd     string `json:"marginBlockEnd,omitempty"`
+	MarginBlockStart   string `json:"marginBlockStart,omitempty"`
+	MarginBottom       string `json:"marginBottom,omitempty"`
+	MarginInline       string `json:"marginInline,omitempty"`
+	MarginInlineEnd    string `json:"marginInlineEnd,omitempty"`
+	MarginInlineStart  string `json:"marginInlineStart,omitempty"`
+	MarginLeft         string `json:"marginLeft,omitempty"`
+	MarginRight        string `json:"marginRight,omitempty"`
+	MarginTop          string `json:"marginTop,omitempty"`
+	PaddingBlock       string `json:"paddingBlock,omitempty"`
+	PaddingBlockEnd    string `json:"paddingBlockEnd,omitempty"`
+	PaddingBlockStart  string `json:"paddingBlockStart,omitempty"`
+	PaddingBottom      string `json:"paddingBottom,omitempty"`
+	PaddingInline      string `json:"paddingInline,omitempty"`
+	PaddingInlineEnd   string `json:"paddingInlineEnd,omitempty"`
+	PaddingInlineStart string `json:"paddingInlineStart,omitempty"`
+	PaddingLeft        string `json:"paddingLeft,omitempty"`
+	PaddingRight       string `json:"paddingRight,omitempty"`
+	PaddingTop         string `json:"paddingTop,omitempty"`
+	SnapAlign          string `json:"snapAlign,omitempty"`
+	SnapStop           string `json:"snapStop,omitempty"`
+	SnapType           string `json:"snapType,omitempty"`
 }
 
 // const (

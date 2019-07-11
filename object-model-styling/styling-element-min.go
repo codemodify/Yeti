@@ -1,11 +1,11 @@
 package objectmodelstyling
 
 type ElementMin struct {
-	BlockSize  string
-	Height     string
-	InlineSize string
-	Width      string
-	Zoom       string
+	BlockSize  string `json:"blockSize,omitempty"`
+	Height     string `json:"height,omitempty"`
+	InlineSize string `json:"inlineSize,omitempty"`
+	Width      string `json:"width,omitempty"`
+	Zoom       string `json:"zoom,omitempty"`
 }
 
 // const (
