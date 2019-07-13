@@ -1,4 +1,4 @@
-package objectmodelstyling
+package styling
 
 type LayoutGrid struct {
 	Area            string

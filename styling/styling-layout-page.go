@@ -1,4 +1,4 @@
-package objectmodelstyling
+package styling
 
 type LayoutPage struct {
 	BreakAfter  string

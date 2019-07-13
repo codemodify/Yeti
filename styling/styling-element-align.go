@@ -1,4 +1,4 @@
-package objectmodelstyling
+package styling
 
 import (
 	"strings"

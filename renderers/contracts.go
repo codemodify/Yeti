@@ -1,8 +1,8 @@
 package renderers
 
-import "github.com/codemodify/Yeti/dom"
+import objectmodel "github.com/codemodify/Yeti/object-model"
 
 // Renderer -
 type Renderer interface {
-	Render(node *dom.NodeModel)
+	Render(node *objectmodel.ObjectModel)
 }

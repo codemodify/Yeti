@@ -7,7 +7,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/codemodify/Yeti/dom"
+	objectmodel "github.com/codemodify/Yeti/object-model"
 )
 
 // PngRenderer - FIXME
@@ -23,14 +23,12 @@ func NewPngRenderer(fileName string) Renderer {
 }
 
 // Render - `Renderer` interface
-func (thisRef PngRenderer) Render(node *dom.NodeModel) {
-	const width, height = 256, 256
-
+func (thisRef PngRenderer) Render(node *objectmodel.ObjectModel) {
 	// Create a colored image of the given width and height.
-	img := image.NewNRGBA(image.Rect(0, 0, width, height))
+	img := image.NewNRGBA(image.Rect(0, 0, int(node.Style.Element.Width), int(node.Style.Element.Height)))
 
-	for y := 0; y < height; y++ {
-		for x := 0; x < width; x++ {
+	for y := 0; y < int(node.Style.Element.Height); y++ {
+		for x := 0; x < int(node.Style.Element.Width); x++ {
 			img.Set(x, y, color.NRGBA{
 				R: uint8((x + y) & 255),
 				G: uint8((x + y) << 1 & 255),
