@@ -22,6 +22,7 @@ var StylingK_ElementAlign = map[string]string{
 	StylingK_ElementAlign_Self:    "",
 }
 
+// Load -
 func (thisRef *ElementAlign) Load(key, value string) {
 	if strings.Compare(key, StylingK_ElementAlign_Content) == 0 {
 		thisRef.Content = value
